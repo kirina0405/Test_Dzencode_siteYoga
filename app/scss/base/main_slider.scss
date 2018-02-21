@@ -1,0 +1,79 @@
+.slider {
+    width: 100%;
+    background-image: botton url(app/img/img0.png);
+    background-size: cover;
+    background-position: center;
+    background-color: $primary-color;
+    height: 700px;
+    padding-top: 50px;
+    @extend .block-flex;
+    div {
+        width: 49%;
+    }
+    .form {
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 30px;
+        form {
+            @extend .block-flex;
+            flex-direction: column;
+            width: 300px;
+            height: 390px;
+            background-color: $h-color;
+            @include border-radius(20px);
+            margin-right: 60px;
+            h3 {
+                color: $primary-color;
+                font-size: 25px;
+                margin-bottom: 30px;
+                text-align: left;
+            }
+            .message {
+                height: 50px;
+                margin-bottom: 18px;
+                background-color: $input-color;
+                @include border-radius(10px);
+                border: 0px;
+                text-align: left;
+            }
+            input {
+                width: 200px;
+                @extend .message;
+                padding: 0 20px;
+            }
+            select {
+                @extend .message;
+                width: 240px;
+                color: $text-color;
+                padding: 0 15px;
+            }
+            button {
+                width: 170px;
+                height: 50px;
+                margin-top: 18px;
+                @include border-radius(10px);
+                border: 0px;
+                color: $h-color;
+                background-color: $primary-color;
+                font-weight: 600;
+            }
+        }
+    }
+    .message1 {
+        color: $h-color;
+        text-align: left;
+        margin: 0 5px 0 40px;
+    }
+    .h1_site {
+        h1 {
+            @extend .message1;
+            font-family: $font-h;
+            font-size: 48px;
+            text-transform: uppercase;
+        }
+        h4 {
+            @extend .message1;
+            margin-top: 10px;
+        }
+    }
+}

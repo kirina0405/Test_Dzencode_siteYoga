@@ -1,0 +1,30 @@
+.our_classes {
+    h2 {
+        color: $primary-color;
+        margin-top: 25px;
+    }
+    h4 {
+        margin: 25px 0 75px;
+        color: $text-color;
+    }
+    article {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        figure {
+            @include border-radius(10px);
+            grid-template-columns: 1fr 1fr;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            figcaption {
+                h3 {
+                    text-align: left;
+                    color: $text-color;
+                    margin: 50px 0 40px;
+                }
+                .autor {
+                    margin-top: 15px;
+                    color: $text-color-light;
+                }
+            }
+        }
+    }
+}

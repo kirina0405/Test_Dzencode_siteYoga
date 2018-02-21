@@ -22,16 +22,22 @@ gulp.task('scripts', function(cb) {
 
 gulp.task('scss', function() {
     gulp.src('app/scss/main.scss')
-        .pipe(scss({ errLogToConsole: true }))
-        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(pleeease({
-            autoprefixer: {
-                browsers: ['> 0.01%']
-            }
-        }))
+        .pipe(scss())
         .pipe(gulp.dest('app/css'))
-        .pipe(browserSync.reload({ stream: true }));
 });
+
+// gulp.task('scss', function() {
+//     gulp.src('app/scss/main.scss')
+//         .pipe(scss({ errLogToConsole: true }))
+//         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+//         .pipe(pleeease({
+//             autoprefixer: {
+//                 browsers: ['> 0.01%']
+//             }
+//         }))
+//         .pipe(gulp.dest('app/css'))
+//         .pipe(browserSync.reload({ stream: true }));
+// });
 
 gulp.task('browser-sync', function() {
     browserSync({

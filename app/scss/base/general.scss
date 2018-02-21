@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSansItalic';
+    src: url('../fonts/OpenSans-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'ChampagneLimousinesThickBold';
+    src: url('../fonts/Champagne_Limousines-ThickBold.ttf');
+}
+
+@font-face {
+    font-family: 'FreestyleScript';
+    src: url('../fonts/FREESCPT.TTF');
+}
+
+$font-stack: OpenSansRegular;
+$font-h: OpenSansBold;
+$font-h4: FreestyleScript;
+$primary-color: #5b6ceb;
+$hover-color: #475bf1;
+$text-color: #555;
+$text-color-light: #999;
+$input-color: #f2f2f2;
+$h-color: #fff;
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: $font-stack;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.grid {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 25px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-family: $font-h;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-family: $font-h4;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+p {
+    color: $text-color;
+    font-size: 14px;
+    text-align: left;
+}
+
+.block-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

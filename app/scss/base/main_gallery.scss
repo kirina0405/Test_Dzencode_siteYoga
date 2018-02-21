@@ -1,0 +1,11 @@
+.glyphicon-search {
+    font-size: 12px;
+    color: red;
+}
+
+.gallery {
+    margin-top: 125px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+}
