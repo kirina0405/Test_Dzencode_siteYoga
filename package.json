@@ -1,0 +1,28 @@
+{
+  "name": "yoga",
+  "version": "1.0.0",
+  "description": "Project Yoga",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Iryna Pikalova",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-scss": "^1.4.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-deleted": "0.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-uglify": "^3.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "pump": "^3.0.0"
+  }
+}
