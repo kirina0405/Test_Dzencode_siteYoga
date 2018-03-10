@@ -41,7 +41,8 @@ a {
 
 h1,
 h2,
-h3 {
+h3,
+h5 {
   text-transform: uppercase;
   font-family: OpenSansBold; }
 
@@ -59,15 +60,30 @@ h4 {
   font-size: 40px;
   font-weight: 200; }
 
+h5 {
+  font-size: 18px; }
+
 p {
   color: #555;
   font-size: 14px;
   text-align: left; }
 
-.block-flex, header, header nav, .slider, .slider form fieldset {
+.block-flex, header, header nav, main .slider .backgroundColor, main .slider form fieldset, .gallery a, .slideshow-container .prev,
+.slideshow-container .next, .features .backgroundImg .block .circle, .flower .prices .buying .cost {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+*:hover {
+  transition: 0.6s ease;
+  outline: none; }
+
+.message2, ::-webkit-input-placeholder, ::-moz-placeholder, :-moz-placeholder, :-ms-input-placeholder, input[placeholder] {
+  font-size: 14px;
+  color: #999; }
+
+input::-moz-placeholder {
+  text-overflow: ellipsis; }
 
 header {
   position: fixed;
@@ -75,7 +91,7 @@ header {
   width: 100%;
   height: 100px;
   background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
   header nav {
     position: relative; }
     header nav ul {
@@ -85,9 +101,16 @@ header {
       header nav ul li a {
         font-size: 14px;
         color: #555;
-        font-family: OpenSansBold; }
+        font-family: OpenSansBold;
+        text-align: center; }
       header nav ul li a:hover {
         color: #5b6ceb; }
+        header nav ul li a:hover hr {
+          width: 28px;
+          background-color: #475bf1;
+          opacity: 1; }
+      header nav ul li hr {
+        opacity: 0; }
     header nav .menu_left {
       justify-content: flex-end; }
       header nav .menu_left li {
@@ -108,87 +131,98 @@ header {
         font-size: 24px;
         color: #5b6ceb; }
 
-.slider {
-  width: 100%;
-  background-image: botton url(app/img/img0.png);
-  background-size: cover;
-  background-position: center;
-  background-color: #5b6ceb;
-  height: 700px;
+main {
   padding-top: 50px; }
-  .slider div {
-    width: 49%; }
-  .slider form {
-    width: 49%; }
-    .slider form fieldset {
-      flex-direction: column;
-      justify-content: space-around;
+  main .slider {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px; }
+    main .slider .backgroundColor {
+      width: 100%;
+      padding: 100px 0;
+      background-color: rgba(71, 91, 241, 0.8); }
+    main .slider div {
+      width: 49%; }
+    main .slider .form {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 100px; }
+    main .slider form {
       width: 300px;
       height: 390px;
-      padding: 30px;
       border: 0px;
       background-color: #fff;
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
       -ms-border-radius: 20px;
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      margin-right: 60px; }
-      .slider form fieldset h3 {
-        color: #5b6ceb;
-        font-size: 25px;
-        margin-bottom: 30px;
-        text-align: left;
-        text-transform: none; }
-      .slider form fieldset .message, .slider form fieldset input, .slider form fieldset select {
-        height: 50px;
-        width: 100%;
-        margin-bottom: 18px;
-        background-color: #f2f2f2;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+      main .slider form fieldset {
+        flex-direction: column;
+        justify-content: space-around;
         border: 0px;
-        text-align: left;
-        font-size: 20px; }
-      .slider form fieldset input {
-        width: 200px;
-        padding: 0 20px; }
-      .slider form fieldset select {
-        width: 240px;
-        color: #555;
-        padding: 0 15px; }
-      .slider form fieldset button {
-        width: 170px;
-        height: 50px;
-        margin-top: 18px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        border-radius: 10px;
-        border: 0px;
-        color: #fff;
-        background-color: #5b6ceb;
-        font-weight: 600;
-        text-align: center; }
-  .slider .message1, .slider .h1_site h1, .slider .h1_site h4 {
-    color: #fff;
-    text-align: left;
-    margin: 0 5px 0 40px; }
-  .slider .h1_site h1 {
-    font-family: OpenSansBold;
-    font-size: 48px;
-    text-transform: uppercase; }
-  .slider .h1_site h4 {
-    margin-top: 10px; }
+        margin: 30px; }
+        main .slider form fieldset h3 {
+          color: #5b6ceb;
+          font-size: 25px;
+          margin-bottom: 20px;
+          text-align: left;
+          text-transform: none; }
+        main .slider form fieldset .message, main .slider form fieldset input, main .slider form fieldset select {
+          height: 50px;
+          width: 228px;
+          margin-bottom: 18px;
+          background-color: #f2f2f2;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          border-radius: 10px;
+          border: 0px;
+          text-align: left;
+          font-size: 14px; }
+        main .slider form fieldset input[placeholder] {
+          padding-left: 12px;
+          color: #999; }
+        main .slider form fieldset select {
+          color: #999;
+          width: 240px;
+          padding-left: 10px; }
+        main .slider form fieldset button {
+          width: 170px;
+          height: 50px;
+          margin: 35px 0 0 70px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          border-radius: 10px;
+          border: 0px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          color: #fff;
+          background-color: #5b6ceb;
+          font-weight: 600;
+          text-align: center;
+          font-size: 16px;
+          cursor: pointer; }
+        main .slider form fieldset button:hover {
+          background-color: #475bf1; }
+    main .slider .message1, main .slider .h1_site h1, main .slider .h1_site h4 {
+      color: #fff;
+      text-align: left;
+      margin-bottom: 20px; }
+    main .slider .h1_site h1 {
+      font-family: OpenSansBold;
+      font-size: 48px;
+      text-transform: uppercase; }
+    main .slider .h1_site h4 {
+      margin-top: 10px; }
 
 .our_classes h2 {
   color: #5b6ceb;
-  margin-top: 25px; }
+  margin-top: 100px; }
 
 .our_classes h4 {
-  margin: 25px 0 75px;
+  margin: 10px 0 60px;
   color: #555; }
 
 .our_classes article {
@@ -215,26 +249,215 @@ header {
 
 .gallery {
   margin-top: 125px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 0px; }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  grid-template-rows: repeat(2, minmax(330px, auto)); }
   .gallery div {
-    background-size: auto 100%;
-    height: 100%; }
-    .gallery div .fon {
-      justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .gallery .fon {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; }
+  .gallery .fon:hover {
+    background-color: rgba(71, 91, 241, 0.8);
+    opacity: 1;
+    cursor: pointer; }
+  .gallery a {
+    width: 57px;
+    height: 57px;
+    -webkit-border-radius: 57px;
+    -moz-border-radius: 57px;
+    -ms-border-radius: 57px;
+    border-radius: 57px;
+    background-color: #fff; }
+
+@media (min-width: 960px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    grid-template-rows: repeat(4, minmax(340px, auto)); } }
+
+@media (min-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    grid-template-rows: repeat(8, minmax(340px, auto)); } }
+
+.about_us {
+  display: inline-flex;
+  margin: 100px 0; }
+  .about_us #about {
+    padding: 30px 60px 0 0;
+    width: 49%; }
+    .about_us #about h2 {
+      color: #5b6ceb;
+      margin-bottom: 30px;
+      text-align: left; }
+
+.slideshow-container {
+  width: 49%;
+  position: relative;
+  margin: auto;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* Number text (1/3 etc) */
+  /* Fading animation */
+  /* On smaller screens, decrease text size */ }
+  .slideshow-container .mySlides {
+    display: none; }
+  .slideshow-container img {
+    vertical-align: middle; }
+  .slideshow-container .prev,
+  .slideshow-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 8px 21px;
+    margin-top: -30px;
+    margin-left: -30px;
+    background-color: #fff;
+    color: #5b6ceb;
+    font-weight: bold;
+    font-size: 30px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
+  .slideshow-container .next {
+    right: -30px; }
+  .slideshow-container .prev:hover,
+  .slideshow-container .next:hover {
+    background-color: #5b6ceb;
+    color: #fff; }
+  .slideshow-container .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0; }
+  .slideshow-container .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+  @media only screen and (max-width: 300px) {
+    .slideshow-container .prev,
+    .slideshow-container .next,
+    .slideshow-container .text {
+      font-size: 11px; } }
+
+.features {
+  width: 100%;
+  background-size: cover;
+  background-position: center; }
+  .features .backgroundImg {
+    width: 100%;
+    background-color: rgba(71, 91, 241, 0.8);
+    padding: 90px 0; }
+    .features .backgroundImg .containerBloks {
+      display: inline-flex;
+      flex-direction: row;
+      margin: 30px 0; }
+    .features .backgroundImg .block {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      opacity: 0; }
-      .gallery div .fon .fon:hover {
-        background-color: rgba(71, 91, 241, 0.589);
-        opacity: 1;
-        cursor: pointer; }
-      .gallery div .fon a {
-        justify-content: center;
-        align-items: center;
-        width: 57px;
-        height: 57px;
-        -webkit-border-radius: 57px;
-        -moz-border-radius: 57px;
-        -ms-border-radius: 57px;
-        border-radius: 57px;
-        background-color: #fff; }
+      color: #fff;
+      padding: 0 15px; }
+      .features .backgroundImg .block .circle {
+        width: 70px;
+        height: 70px;
+        -webkit-border-radius: 70px;
+        -moz-border-radius: 70px;
+        -ms-border-radius: 70px;
+        border-radius: 70px;
+        border: 2px solid #fff; }
+      .features .backgroundImg .block h5 {
+        margin: 30px 0 29px; }
+      .features .backgroundImg .block p {
+        text-align: center;
+        color: #fff; }
+
+.flower {
+  width: 100%;
+  background-size: cover;
+  background-position: left;
+  padding: 100px 0 170px; }
+  .flower .prices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 100px; }
+    .flower .prices .buying {
+      width: 370px;
+      height: 490px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      background-color: #fff; }
+      .flower .prices .buying .cost {
+        width: 100%;
+        height: 150px;
+        background-color: #5b6ceb;
+        -webkit-border-radius: 20px 20px 0 0;
+        -moz-border-radius: 20px 20px 0 0;
+        -ms-border-radius: 20px 20px 0 0;
+        border-radius: 20px 20px 0 0; }
+        .flower .prices .buying .cost p .money, .flower .prices .buying .cost p .number, .flower .prices .buying .cost p .month {
+          color: #fff;
+          font-family: OpenSansBold; }
+        .flower .prices .buying .cost p .money {
+          font-size: 32px;
+          margin: 0 10px 50px 50px; }
+        .flower .prices .buying .cost p .number {
+          font-size: 67px; }
+        .flower .prices .buying .cost p .month {
+          font-size: 18px;
+          text-transform: uppercase; }
+      .flower .prices .buying .cost-bottom {
+        padding: 50px 55px; }
+        .flower .prices .buying .cost-bottom p {
+          font-size: 18px; }
+        .flower .prices .buying .cost-bottom hr {
+          margin: 25px 60px; }
+        .flower .prices .buying .cost-bottom .button {
+          width: 170px;
+          height: 50px;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          border-radius: 20px;
+          border: 0px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          color: #fff;
+          background-color: #5b6ceb;
+          font-weight: 600;
+          text-align: center;
+          font-size: 16px;
+          cursor: pointer; }
+        .flower .prices .buying .cost-bottom button:hover {
+          background-color: #475bf1; }

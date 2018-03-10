@@ -1,0 +1,71 @@
+.flower {
+        width: 100%;
+        background-size: cover;
+        background-position: left;
+        padding: 100px 0 170px;
+        .prices {
+            display: grid;
+	grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 100px;
+            .buying {
+                width: 370px;
+                height: 490px;
+                @include border-radius(20px);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                    background-color: $h-color;
+                .cost {
+                    width: 100%;
+                    height: 150px;
+                    background-color: $primary-color;
+                    @include border-radius(20px 20px 0 0);
+                    @extend .block-flex;
+                    p {
+                        .money, .number, .month {
+                        color: $h-color;
+                        font-family: $font-h;
+                        }
+                        .money {
+                            font-size: 32px;
+                            margin: 0 10px 50px 50px;
+                        }
+                        .number{
+                            font-size: 67px;
+                        }
+                        .month {
+                            font-size: 18px;
+                            text-transform: uppercase;
+                        }
+                    
+                    }
+
+                }
+                .cost-bottom {
+                    padding: 50px 55px;
+                    p {
+                        font-size: 18px;
+                    }
+                    hr {
+                        margin: 25px 60px;
+                    }
+                    .button {
+                        width: 170px;
+                        height: 50px;
+                        @include border-radius(20px);
+                        border: 0px;
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                        color: $h-color;
+                        background-color: $primary-color;
+                        font-weight: 600;
+                        text-align: center;
+                        font-size: 16px;
+                        cursor: pointer;
+                    }
+                    button:hover {
+                        background-color: $hover-color;
+                    }
+
+                }
+            }
+        }
+
+}

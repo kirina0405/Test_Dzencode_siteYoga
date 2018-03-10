@@ -11,13 +11,20 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     cache = require('gulp-cache');
 
-gulp.task('scripts', function(cb) {
-    pump([
-        gulp.src('app/js/*.js'),
-        concat('script.js'),
-        uglify(),
-        gulp.dest('app/js')
-    ], cb);
+// gulp.task('scripts', function(cb) {
+//     pump([
+//         gulp.src('app/js/*.js'),
+//         concat('script.js'),
+//         uglify(),
+//         gulp.dest('app/js')
+//     ], cb);
+// });
+
+gulp.task('scripts', function() {
+    return gulp.src('app/js/*.js')
+        .pipe(concat('script.js')) // Собираем их в кучу в новом файле libs.min.js
+        .pipe(uglify()) // Сжимаем JS файл
+        .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
 
 gulp.task('scss', function() {
