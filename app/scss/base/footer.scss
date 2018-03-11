@@ -1,0 +1,56 @@
+footer {
+    background-color: $primary-color;
+    color: $h-color;
+    padding-top: 100px;
+    .copyright {
+        background-color: $hover-color;
+        height: 100px;
+        @extend .block-flex;
+    }
+    h5 {
+        margin-bottom: 60px;
+        text-align: left;
+    }
+    p {
+        color: $input-color;
+    }
+    .contacts {
+        display: inline-flex;
+        flex-direction: row;
+        margin-bottom: 100px;
+        .about {
+            width: 49%;
+            p {
+                margin-bottom: 70px;
+                padding-right: 80px;
+            }
+            div {
+                text-align: left;
+                img {
+                    margin-right: 20px;
+                }
+            }
+        }
+        .contact_us,
+        .contact_us1 {
+            width: 24%;
+            text-align: left;
+            div {
+                display: inline-flex;
+                flex-direction: row;
+                margin-bottom: 35px;
+                p {
+                    margin-right: 22px;
+                }
+            }
+        }
+        .contact_us1 {
+            h5 {
+                margin-bottom: 80px;
+            }
+            div {
+                margin-bottom: 55px;
+            }
+        }
+    }
+}

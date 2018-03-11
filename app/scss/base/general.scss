@@ -43,6 +43,7 @@ $h-color: #fff;
     border-radius: $radius;
 }
 
+// @include border-radius(??px)
 * {
     margin: 0;
     padding: 0;
@@ -59,6 +60,25 @@ $h-color: #fff;
     display: grid;
     grid-column-gap: 30px;
     grid-row-gap: 25px;
+}
+
+.block-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-border-radius {
+    @include border-radius(15px);
+    background-color: $h-color;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+// @extend .block-flex (.block-border-radius)
+*:hover,
+*:focus {
+    transition: 0.6s ease;
+    outline: none;
 }
 
 li {
@@ -94,24 +114,15 @@ h4 {
     font-size: 40px;
     font-weight: 200;
 }
+
 h5 {
     font-size: 18px;
 }
+
 p {
     color: $text-color;
     font-size: 14px;
     text-align: left;
-}
-
-.block-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-*:hover {
-    transition: 0.6s ease;
-    outline: none;
 }
 
 .message2 {

@@ -1,0 +1,91 @@
+.bloquotes {
+    display: inline-flex;
+    flex-direction: row;
+    .slideshow-container {
+        @extend .block-border-radius;
+        padding: 40px 60px;
+        width: 1030px;
+        margin: 0 40px;
+        .mySlides1 {
+            figure {
+                display: flex;
+                flex-direction: row;
+                .text {
+                    display: inline-flex;
+                    flex-direction: row;
+                    padding-right: 60px;
+                    hr {
+                        width: 1px;
+                        margin: 60px -12px 0 0;
+                    }
+                }
+                p {
+                    img {
+                        @include border-radius(50%);
+                        border: 2px solid $text-color-light;
+                        margin-right: 45px;
+                    }
+                }
+                .open {
+                    margin-top: -20px;
+                }
+                .open:before {
+                    content: open-quote;
+                    font-size: 70px;
+                    color: $primary-color;
+                }
+                .close {
+                    padding-top: 30px;
+                }
+                .close:after {
+                    content: close-quote;
+                    font-size: 70px;
+                    color: $primary-color;
+                }
+            }
+            .next_trainer {
+                margin: 0 0 -70px 270px;
+            }
+        }
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            @extend .block-flex;
+            padding: 6px 12px;
+            margin-top: 100px;
+            margin-left: 220px;
+            background-color: $h-color;
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 15px;
+            @include border-radius(50px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        /* Position the "next button" to the right */
+        .next {
+            right: 570px;
+        }
+    }
+    .block-dot {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 10px 0;
+            border-radius: 50%;
+            border: 2px solid $text-color;
+            display: block;
+            transition: background-color 0.6s ease;
+        }
+    }
+    .active,
+    .dot:hover {
+        background-color: $hover-color;
+        border: 2px solid $hover-color;
+    }
+}
